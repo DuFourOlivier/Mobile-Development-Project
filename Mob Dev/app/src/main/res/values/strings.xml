@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Mobile_Dev_Project</string>
+    <string name="app_name">Home Page</string>
+    <string name="hint_search">Search</string>
+    <string name="Text_search">Search</string>
+    <string name="HomeScreen_Title">Welcome To Antwerp</string>
+    <string name="HomeScreen_SubTitle">Zoek op categorie zoals nieuws, feest</string>
+    <string name="Description_homepicture">HomePicture</string>
+    <string name="Description_searchbalk">Searchbalk</string>
 </resources>
