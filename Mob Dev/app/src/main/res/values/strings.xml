@@ -15,4 +15,11 @@
     <string name="Bekend_Titel2">Titel2</string>
     <string name="Bekend_titel1">Titel1</string>
     <string name="bekende_plaatsen_HoofdtitelTekst">Bekende Plaatsen</string>
+    <string name="eten_drinken"><![CDATA[Eten & Drinken]]></string>
+    <string name="restaurant_a">Restaurant A</string>
+    <string name="reviews">Reviews</string>
+    <string name="caf_b">Café B</string>
+    <string name="reviews">Reviews</string>
+    <string name="todo">TODO</string>
+    <string name="todo">TODO</string>
 </resources>
