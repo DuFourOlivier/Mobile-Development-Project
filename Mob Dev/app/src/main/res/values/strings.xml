@@ -6,4 +6,13 @@
     <string name="HomeScreen_SubTitle">Zoek op categorie zoals nieuws, feest</string>
     <string name="Description_homepicture">HomePicture</string>
     <string name="Description_searchbalk">Searchbalk</string>
+    <string name="titel_1">Titel 1</string>
+    <string name="nieuws">Nieuws</string>
+    <string name="NieuwsTab_tekst">******************************************************************************************************************</string>
+    <string name="titel_2">Titel 2</string>
+    <string name="foto_artikel1">Foto_Artikel1</string>
+    <string name="nieuws_artikel2">Nieuws_Artikel2</string>
+    <string name="Bekend_Titel2">Titel2</string>
+    <string name="Bekend_titel1">Titel1</string>
+    <string name="bekende_plaatsen_HoofdtitelTekst">Bekende Plaatsen</string>
 </resources>

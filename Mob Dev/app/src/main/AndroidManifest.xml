@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobile_Dev_Project">
-        <activity android:name=".NieuwsTablad"></activity>
+        <activity android:name=".Bekende_Plaatsen"></activity>
+        <activity android:name=".NieuwsTablad" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

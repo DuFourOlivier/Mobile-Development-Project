@@ -4,57 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NieuwsTablad">
+    tools:context=".Bekende_Plaatsen">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".NieuwsTablad">
+    <TextView
+        android:id="@+id/Bekend_subtitel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/Bekend_Titel2"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bekend_Artikel2" />
 
-        <TextView
-            android:id="@+id/Bekend_subtitel1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:text="@string/titel_2"
-            android:textAllCaps="false"
-            android:textSize="24sp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Bekend_Artikel2" />
+    <ImageView
+        android:id="@+id/Bekend_Artikel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/nieuws_artikel2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="316dp"
+        tools:srcCompat="@drawable/ic_launcher_background" />
 
-        <ImageView
-            android:id="@+id/Bekend_Artikel2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:contentDescription="@string/nieuws_artikel2"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="316dp"
-            tools:srcCompat="@tools:sample/avatars"
-            tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/Bekend_tekst1"
+        android:layout_width="350dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/NieuwsTab_tekst"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bekend_subtitel1"
+        app:layout_constraintVertical_bias="0.100000024" />
 
-        <TextView
-            android:id="@+id/Bekend_tekst1"
-            android:layout_width="350dp"
-            android:layout_height="33dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="32dp"
-            android:text="@string/NieuwsTab_tekst"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Bekend_subtitel1"
-            app:layout_constraintVertical_bias="0.100000024" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/Bekend_subtitel2"
@@ -63,7 +57,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/titel_1"
+        android:text="@string/Bekend_titel1"
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="normal"
@@ -79,7 +73,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:text="@string/nieuws"
+        android:text="@string/bekende_plaatsen_HoofdtitelTekst"
         android:textAllCaps="true"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -97,7 +91,7 @@
         android:contentDescription="@string/foto_artikel1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Bekende_PLaats_HoofdTitel"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@drawable/ic_launcher_background" />
 
     <TextView
         android:id="@+id/Bekend_tekst2"
@@ -113,3 +107,6 @@
         app:layout_constraintTop_toBottomOf="@+id/Bekend_subtitel2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
