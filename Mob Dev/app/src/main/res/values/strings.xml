@@ -19,16 +19,15 @@
     <string name="restaurant_a">Restaurant A</string>
     <string name="reviews">Reviews</string>
     <string name="caf_b">Café B</string>
-    <string name="reviews">Reviews</string>
-    <string name="todo">TODO</string>
     <string name="todo">TODO</string>
     <string name="feesten_HoofdTitel">Feesten</string>
     <string name="feestje_1">Feestje 1</string>
     <string name="concept">Concept</string>
     <string name="data">Data</string>
     <string name="feestje_2">Feestje 2</string>
-    <string name="concept">Concept</string>
-    <string name="todo">TODO</string>
-    <string name="todo">TODO</string>
-    <string name="data">Data</string>
+
+    <string name="nieuws_Button">NIEUWS</string>
+    <string name="bekende_plaatsen_Button">Bekende Plaatsen</string>
+    <string name="Eten_Drinken_Button"><![CDATA[Eten&Drinken]]></string>
+    <string name="party_Button">Party</string>
 </resources>
