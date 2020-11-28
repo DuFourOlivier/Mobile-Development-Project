@@ -28,6 +28,6 @@
 
     <string name="nieuws_Button">NIEUWS</string>
     <string name="bekende_plaatsen_Button">Bekende Plaatsen</string>
-    <string name="Eten_Drinken_Button"><![CDATA[Eten&Drinken]]></string>
+    <string name="Eten_Drinken_Button"><![CDATA[Eten & Drinken]]></string>
     <string name="party_Button">Party</string>
 </resources>
