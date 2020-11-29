@@ -10,5 +10,6 @@ public class NieuwsTablad extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nieuws_tablad);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 }
