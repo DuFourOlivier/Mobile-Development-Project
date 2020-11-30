@@ -7,7 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+//Todo: -alle theorie/labo's, recycler view, navigatie bar
+//Todo: echte informatie in database
+//Todo: google maps
+//Todo: navigatie bar
+//Todo: recycler view
+//Todo:extern openen van sites in app zelf
+//Todo: filter optie
 public class MainActivity extends AppCompatActivity {
 
     @Override
