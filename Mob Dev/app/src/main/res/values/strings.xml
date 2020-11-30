@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Home Page</string>
+    <string name="app_name">At Antwerp</string>
     <string name="hint_search">Search</string>
     <string name="Text_search">Search</string>
     <string name="HomeScreen_Title">Welcome To Antwerp</string>
@@ -30,4 +30,8 @@
     <string name="bekende_plaatsen_Button">Bekende Plaatsen</string>
     <string name="Eten_Drinken_Button"><![CDATA[Eten & Drinken]]></string>
     <string name="party_Button">Party</string>
+    <string name="Feesten_label">Feesten</string>
+    <string name="label_horeca">Horeca</string>
+    <string name="label_toerisme">Toerisme</string>
+    <string name="label_nieuws">Nieuws</string>
 </resources>

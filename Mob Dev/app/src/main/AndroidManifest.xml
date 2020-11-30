@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mobile_Dev_Project">
         <activity android:name=".Party"
+            android:label="@string/Feesten_label"
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".Eten_Drinken"
+            android:label="@string/label_horeca"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Bekende_Plaatsen" android:parentActivityName=".MainActivity" />
-        <activity android:name=".NieuwsTablad" android:parentActivityName=".MainActivity" />
+        <activity android:name=".Bekende_Plaatsen" android:parentActivityName=".MainActivity"
+            android:label="@string/label_toerisme"/>
+        <activity android:name=".NieuwsTablad" android:parentActivityName=".MainActivity"
+            android:label="@string/label_nieuws"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

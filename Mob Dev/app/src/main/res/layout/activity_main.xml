@@ -36,9 +36,9 @@
 
     <Button
         android:id="@+id/Nieuws"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_width="111dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="44dp"
         android:onClick="NavigateToNieuws"
         android:text="@string/nieuws_Button"
@@ -49,32 +49,31 @@
         android:id="@+id/Plaatsen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
+        android:layout_marginStart="220dp"
         android:layout_marginTop="44dp"
         android:onClick="NavigateToPlaatsen"
-        android:text="@string/bekende_plaatsen_Button"
+        android:text="@string/label_toerisme"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <Button
         android:id="@+id/Eten_Drinken"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="111dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="220dp"
         android:onClick="NavigateToEten"
-        android:text="@string/Eten_Drinken_Button"
+        android:text="@string/label_horeca"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Plaatsen" />
+        app:layout_constraintTop_toTopOf="@+id/Party" />
 
     <Button
         android:id="@+id/Party"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_width="111dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="32dp"
         android:onClick="NavigateToParty"
-        android:text="@string/party_Button"
+        android:text="@string/Feesten_label"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nieuws" />
 
