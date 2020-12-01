@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="nav_plaats" type="id"></item>
+    <item name="nav_feesten" type="id"></item>
+    <item name="nav_horeca" type="id"></item>
+</resources>

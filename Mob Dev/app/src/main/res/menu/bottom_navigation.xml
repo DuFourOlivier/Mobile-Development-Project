@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/nav_home"
+    android:icon="@drawable/ic_baseline_home_24"
+    android:title="Home" />
+<item android:id="@+id/nav_nieuws"
+    android:icon="@drawable/ic_baseline_info_24"
+    android:title="Nieuws" />
+<item android:id="@id/nav_plaats"
+        android:icon="@drawable/ic_baseline_place_24"
+        android:title="Toerisme" />
+<item android:id="@id/nav_horeca"
+        android:icon="@drawable/ic_baseline_fastfood_24"
+        android:title="Horeca" />
+<item android:id="@id/nav_feesten"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="Feesten" />
+
+
+</menu>
