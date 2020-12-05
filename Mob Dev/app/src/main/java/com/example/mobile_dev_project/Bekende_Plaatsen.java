@@ -2,14 +2,28 @@ package com.example.mobile_dev_project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.LinkedList;
+
 public class Bekende_Plaatsen extends AppCompatActivity {
+
+    private RecyclerView mRecyclerView;
+    private WordListAdapter mWordListAdapter;
+
+    private final LinkedList<String> mWordList = new LinkedList<>();
+
+
+    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,5 +60,15 @@ public class Bekende_Plaatsen extends AppCompatActivity {
                 return false;
             }
         });
+
+        for (int i = 0; i < 20; i++) {
+            mWordList.addLast("Word " + i);
+        }
+
+
+        mRecyclerView = findViewById(R.id.Recycler);
+        mWordListAdapter = new WordListAdapter(this,mWordList);
+        mRecyclerView.setAdapter(mWordListAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }
