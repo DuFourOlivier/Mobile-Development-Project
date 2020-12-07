@@ -2,6 +2,8 @@ package com.example.mobile_dev_project;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,13 +11,19 @@ import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.LinkedList;
+
 public class Eten_Drinken extends AppCompatActivity {
 
+    private RecyclerView mRecyclerView;
+    private WordListAdapter mWordListAdapter;
+
+    private final LinkedList<String> mWordList = new LinkedList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eten__drinken);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.nav_horeca);
@@ -46,5 +54,15 @@ public class Eten_Drinken extends AppCompatActivity {
                 return false;
             }
         });
+
+        for (int i = 0; i < 20; i++) {
+            mWordList.addLast("eten " + i);
+        }
+
+
+        mRecyclerView = findViewById(R.id.Recycler);
+        mWordListAdapter = new WordListAdapter(this,mWordList);
+        mRecyclerView.setAdapter(mWordListAdapter);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 }

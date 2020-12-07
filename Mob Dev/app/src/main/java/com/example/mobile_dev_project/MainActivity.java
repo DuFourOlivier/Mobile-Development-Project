@@ -16,13 +16,14 @@ import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-//Todo: -alle theorie/labo's, recycler view, navigatie bar
-//Todo: echte informatie in database
-//Todo: google maps
-//Todo: navigatie bar
-//Todo: recycler view
-//Todo:extern openen van sites in app zelf
-//Todo: filter optie
+
+//Todo: echte informatie in database 14/12
+//Todo: google maps 21/12
+//Todo:extern openen van sites in app zelf 21/12
+//Todo: filter optie 21/12
+//Todo: layout verbeteren 21/12
+
+//Todo 28/12 Evaluatie + bronnen + enige commentaar
 public class MainActivity extends AppCompatActivity {
 
     @Override

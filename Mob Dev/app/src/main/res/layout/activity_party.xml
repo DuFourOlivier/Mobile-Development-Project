@@ -6,102 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Party">
 
-    <TextView
-        android:id="@+id/Feest_HoofdTitel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/feesten_HoofdTitel"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/Feesten_foto1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="92dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/Feesten_Titel1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
-        android:text="@string/feestje_1"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Feesten_foto1" />
-
-    <TextView
-        android:id="@+id/Feest_concept1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/concept"
-        app:layout_constraintEnd_toEndOf="@+id/Feesten_Titel1"
-        app:layout_constraintStart_toStartOf="@+id/Feesten_Titel1"
-        app:layout_constraintTop_toBottomOf="@+id/Feesten_Titel1" />
-
-    <TextView
-        android:id="@+id/Data1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/data"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Feesten_foto1" />
-
-    <TextView
-        android:id="@+id/Feesten_Titel2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/feestje_2"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/Feesten_Titel1"
-        app:layout_constraintTop_toTopOf="@+id/Feesten_foto2" />
-
-    <TextView
-        android:id="@+id/Feesten_concept"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/concept"
-        app:layout_constraintEnd_toEndOf="@+id/Feesten_Titel2"
-        app:layout_constraintStart_toStartOf="@+id/Feesten_Titel2"
-        app:layout_constraintTop_toBottomOf="@+id/Feesten_Titel2" />
-
-    <TextView
-        android:id="@+id/Data2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/data"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Feesten_foto2" />
-
-    <ImageView
-        android:id="@+id/Feesten_foto2"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Data1"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

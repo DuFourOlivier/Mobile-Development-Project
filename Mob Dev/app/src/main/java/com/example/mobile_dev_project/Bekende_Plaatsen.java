@@ -29,7 +29,7 @@ public class Bekende_Plaatsen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bekende__plaatsen);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.nav_plaats);
@@ -62,7 +62,7 @@ public class Bekende_Plaatsen extends AppCompatActivity {
         });
 
         for (int i = 0; i < 20; i++) {
-            mWordList.addLast("Word " + i);
+            mWordList.addLast("toer " + i);
         }
 
 

@@ -12,7 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.LinkedList;
 
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordViewHolder> {
+    public final static String EXTRA_MSG = "com.example.android.mobile_deb_project.extra.MESSAGE";
     private final LinkedList<String> mWordList;
     private LayoutInflater mInflater;
 
@@ -67,8 +70,10 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 // Use that to access the affected item in mWordList.
             String element = mWordList.get(mPosition);
 // Change the word in the mWordList.
-            Intent intent = new Intent(v.getContext(),Party.class);
+            Intent intent = new Intent(v.getContext(),InfoPage.class);
+            intent.putExtra(EXTRA_MSG,element);
             v.getContext().startActivity(intent);
+
 // Notify the adapter, that the data has changed so it can
 // update the RecyclerView to display the data.
             mAdapter.notifyDataSetChanged();
