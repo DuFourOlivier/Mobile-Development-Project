@@ -1,6 +1,7 @@
 package com.example.mobile_dev_project;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,7 +67,8 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 // Use that to access the affected item in mWordList.
             String element = mWordList.get(mPosition);
 // Change the word in the mWordList.
-            mWordList.set(mPosition, "Clicked! " + element);
+            Intent intent = new Intent(v.getContext(),Party.class);
+            v.getContext().startActivity(intent);
 // Notify the adapter, that the data has changed so it can
 // update the RecyclerView to display the data.
             mAdapter.notifyDataSetChanged();
