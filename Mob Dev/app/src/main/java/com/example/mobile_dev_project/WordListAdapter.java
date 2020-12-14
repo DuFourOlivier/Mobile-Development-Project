@@ -56,7 +56,7 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 
         public WordViewHolder(View itemView, WordListAdapter adapter) {
             super(itemView);
-            wordItemView = itemView.findViewById(R.id.word);
+            wordItemView = itemView.findViewById(R.id.textView);
             this.mAdapter = adapter;
             itemView.setOnClickListener(this);
 
@@ -80,5 +80,6 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
 
         }
     }
+
 }
 

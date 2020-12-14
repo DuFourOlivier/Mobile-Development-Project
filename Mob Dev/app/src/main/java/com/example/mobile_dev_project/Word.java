@@ -1,4 +1,4 @@
-package com.example.roomwordssample;
+package com.example.mobile_dev_project;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;

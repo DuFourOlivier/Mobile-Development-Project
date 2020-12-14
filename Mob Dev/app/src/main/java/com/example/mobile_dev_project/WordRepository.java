@@ -1,14 +1,11 @@
-package com.example.roomwordssample;
+package com.example.mobile_dev_project;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
 import androidx.lifecycle.LiveData;
 
-import java.util.HashSet;
 import java.util.List;
-
-import javax.xml.transform.Result;
 
 public class WordRepository {
     private WordDao mWordDao;
@@ -22,7 +19,7 @@ public class WordRepository {
 
     }
 
-    LiveData<List<Word>> getmAllWords()
+    LiveData<List<Word>> getAllWords()
     {
         return  mAllWords;
     }
@@ -31,14 +28,6 @@ public class WordRepository {
     {
         new insertAsyncTask(mWordDao).execute(word);
 
-    }
-    public void deleteAll()
-    {
-        new deleteAllWordsAsyncTask(mWordDao).execute();
-    }
-    public void deleteWord(Word word)
-    {
-        new deleteWordAsyncTask(mWordDao).execute();
     }
     private static class insertAsyncTask extends AsyncTask<Word, Void, Void> {
 
@@ -55,32 +44,8 @@ public class WordRepository {
         }
     }
 
-    private static class deleteAllWordsAsyncTask extends AsyncTask<Void, Void, Void> {
-        private WordDao mAsyncTaskDao;
 
-        deleteAllWordsAsyncTask(WordDao dao) {
-            mAsyncTaskDao = dao;
-        }
 
-        @Override
-        protected Void doInBackground(Void... voids) {
-            mAsyncTaskDao.deleteAll();
-            return null;
-        }
-    }
-    private static class deleteWordAsyncTask extends AsyncTask<Word, Void, Void> {
-        private WordDao mAsyncTaskDao;
-
-        deleteWordAsyncTask(WordDao dao) {
-            mAsyncTaskDao = dao;
-        }
-
-        @Override
-        protected Void doInBackground(final Word... params) {
-            mAsyncTaskDao.deleteWord(params[0]);
-            return null;
-        }
-    }
 
 
 

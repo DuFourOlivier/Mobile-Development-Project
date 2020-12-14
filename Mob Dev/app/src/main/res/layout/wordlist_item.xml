@@ -6,7 +6,9 @@
     android:padding="6dp">
 
     <TextView
-        android:id="@+id/word"
-        style="@style/word_title" />
+        android:id="@+id/textView"
+        style="@style/word_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

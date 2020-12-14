@@ -1,4 +1,4 @@
-package com.example.roomwordssample;
+package com.example.mobile_dev_project;
 
 import android.app.Application;
 
@@ -14,19 +14,10 @@ public class WordViewModel extends AndroidViewModel {
     private LiveData<List<Word>> mAllwords;
 
 
-    public void deleteAll()
-    {
-        mRepository.deleteAll();
-    }
-    public void deleteWord(Word word)
-    {
-        mRepository.deleteWord(word);
-    }
-
-    public WordViewModel(@NonNull Application application) {
+    public WordViewModel( Application application) {
         super(application);
         mRepository = new WordRepository(application);
-        mAllwords = mRepository.getmAllWords();
+        mAllwords = mRepository.getAllWords();
 
     }
     LiveData<List<Word>> getAllWords()

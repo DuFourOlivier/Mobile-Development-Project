@@ -1,4 +1,4 @@
-package com.example.mobile_dev_project.ui;
+package com.example.mobile_dev_project;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,12 +8,9 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mobile_dev_project.R;
-import com.example.mobile_dev_project.Word;import com.example.mobile_dev_project.WordRepository;
-
 import java.util.List;
 
-public class DBListAdapter extends RecyclerView.Adapter<WordRepository.DBListAdapter.WordViewHolder>{
+public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHolder>{
 
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words

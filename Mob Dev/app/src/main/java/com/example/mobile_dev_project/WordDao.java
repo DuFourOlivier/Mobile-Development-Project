@@ -1,4 +1,4 @@
-package com.example.roomwordssample;
+package com.example.mobile_dev_project;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -19,13 +19,9 @@ public interface WordDao {
     void deleteAll();
 
     @Query("SELECT * FROM word_table ORDER BY word ASC")
-    LiveData<List<Word>>getAllWords();
+    LiveData<List<Word>> getAllWords();
 
-    @Query("SELECT * from word_table LIMIT 1")
-    Word[] getAnyWord();
 
-    @Delete
-    void deleteWord(Word word);
 
 
 
