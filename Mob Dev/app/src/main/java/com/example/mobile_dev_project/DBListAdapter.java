@@ -72,6 +72,7 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
             int mPosition = getLayoutPosition();
 // Use that to access the affected item in mWordList.
             //String element = mWordList.get(mPosition);
+            String element = mWords.get(mPosition).toString();
 // Change the word in the mWordList.
             Intent intent = new Intent(v.getContext(),InfoPage.class);
             intent.putExtra(EXTRA_MSG,mPosition);

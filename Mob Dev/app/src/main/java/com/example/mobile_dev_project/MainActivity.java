@@ -17,10 +17,9 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-//Todo: echte informatie in database 14/12
+//Todo: database alle paginas + info pagina goed laten werken 21/12
 //Todo: google maps 21/12
 //Todo:extern openen van sites in app zelf 21/12
-//Todo: filter optie 21/12
 //Todo: layout verbeteren 21/12
 
 //Todo 28/12 Evaluatie + bronnen + enige commentaar

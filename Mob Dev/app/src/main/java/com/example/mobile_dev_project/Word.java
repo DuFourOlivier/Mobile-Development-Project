@@ -12,13 +12,20 @@ public class Word {
     @NonNull
     @ColumnInfo(name = "word")
     private String mWord;
-    public Word(@NonNull String word)
+
+    @NonNull
+    @ColumnInfo(name = "titel")
+    private String mtitel;
+
+    public Word(@NonNull String word ,@NonNull String mtitel)
     {
         this.mWord = word;
+        this.mtitel = mtitel;
     }
 
     public String getWord()
     {
         return this.mWord;
     }
+    public String getMtitel() { return this.mtitel;}
 }

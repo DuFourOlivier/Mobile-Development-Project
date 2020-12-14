@@ -68,10 +68,10 @@ public class WordListAdapter extends RecyclerView.Adapter<WordListAdapter.WordVi
             // Get the position of the item that was clicked.
             int mPosition = getLayoutPosition();
 // Use that to access the affected item in mWordList.
-            String element = mWordList.get(mPosition);
+
 // Change the word in the mWordList.
             Intent intent = new Intent(v.getContext(),InfoPage.class);
-            intent.putExtra(EXTRA_MSG,element);
+            intent.putExtra(EXTRA_MSG,mWordList.get(mPosition));
             v.getContext().startActivity(intent);
 
 // Notify the adapter, that the data has changed so it can
