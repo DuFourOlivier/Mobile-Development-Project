@@ -1,6 +1,7 @@
 package com.example.mobile_dev_project;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import java.util.List;
 
 public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHolder>{
 
+    public final static String EXTRA_MSG = "com.example.android.mobile_deb_project.extra.MESSAGE";
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
 
@@ -20,7 +22,7 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = mInflater.inflate(R.layout.wordlist_item, parent, false);
-        return new WordViewHolder(itemView);
+        return new WordViewHolder(itemView,this);
     }
 
     @Override
@@ -52,12 +54,33 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
         else return 0;
     }
 
-    class WordViewHolder extends RecyclerView.ViewHolder {
-        private final TextView wordItemView;
 
-        private WordViewHolder(View itemView) {
+    class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private final TextView wordItemView;
+        final DBListAdapter mAdapter;
+
+        private WordViewHolder(View itemView,DBListAdapter adapter) {
             super(itemView);
+            this.mAdapter = adapter;
             wordItemView = itemView.findViewById(R.id.textView);
+            wordItemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            // Get the position of the item that was clicked.
+            int mPosition = getLayoutPosition();
+// Use that to access the affected item in mWordList.
+            //String element = mWordList.get(mPosition);
+// Change the word in the mWordList.
+            Intent intent = new Intent(v.getContext(),InfoPage.class);
+            intent.putExtra(EXTRA_MSG,mPosition);
+            v.getContext().startActivity(intent);
+
+// Notify the adapter, that the data has changed so it can
+// update the RecyclerView to display the data.
+            mAdapter.notifyDataSetChanged();
+
         }
     }
 }
