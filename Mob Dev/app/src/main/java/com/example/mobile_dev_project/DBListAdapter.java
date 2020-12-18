@@ -14,6 +14,8 @@ import java.util.List;
 public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHolder>{
 
     public final static String EXTRA_MSG = "com.example.android.mobile_deb_project.extra.MESSAGE";
+    public final static String EXTRA_TITLE = "com.example.android.mobile_deb_project.extra.TITLE";
+
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
 
@@ -72,10 +74,13 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
             int mPosition = getLayoutPosition();
 // Use that to access the affected item in mWordList.
             //String element = mWordList.get(mPosition);
+            Word pickedelement = mWords.get(mPosition);
             String element = mWords.get(mPosition).toString();
+
 // Change the word in the mWordList.
             Intent intent = new Intent(v.getContext(),InfoPage.class);
-            intent.putExtra(EXTRA_MSG,mPosition);
+            intent.putExtra(EXTRA_MSG,pickedelement.getWord().toString());
+            intent.putExtra(EXTRA_TITLE,pickedelement.getMtitel().toString());
             v.getContext().startActivity(intent);
 
 // Notify the adapter, that the data has changed so it can

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -14,20 +15,27 @@ import org.w3c.dom.Text;
 import java.util.List;
 
 public class InfoPage extends AppCompatActivity {
-    private TextView textView;
+    private TextView mdescription;
     private TextView mtitle;
+    private ImageView mimage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_page);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        textView = findViewById(R.id.image_description);
+        mdescription = findViewById(R.id.Description);
         mtitle = findViewById(R.id.Title);
+        mimage = findViewById(R.id.picture);
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra(DBListAdapter.EXTRA_MSG);
-        textView.setText(msg);
+        String title = intent.getStringExtra(DBListAdapter.EXTRA_TITLE);
+
+
+        mdescription.setText(msg);
+        mtitle.setText(title);
+        mimage.setImageResource(R.drawable.ic_action_name);
 
 
 
