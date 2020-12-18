@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
@@ -31,11 +33,19 @@ public class InfoPage extends AppCompatActivity {
         Intent intent = getIntent();
         String msg = intent.getStringExtra(DBListAdapter.EXTRA_MSG);
         String title = intent.getStringExtra(DBListAdapter.EXTRA_TITLE);
+        String imageName = intent.getStringExtra(DBListAdapter.EXTRA_IMAGE);
 
+        int imagerec= getResources().getIdentifier("@drawable/" + imageName ,null,this.getPackageName());
+        if (imagerec == 0)
+        {
+            imagerec= getResources().getIdentifier("@mipmap/ic_launcher" ,null,this.getPackageName());
 
+        }
+        mimage.setImageResource(imagerec);
         mdescription.setText(msg);
         mtitle.setText(title);
-        mimage.setImageResource(R.drawable.ic_action_name);
+        //mimage.setImageResource(R.drawable.ic_action_name);
+
 
 
 

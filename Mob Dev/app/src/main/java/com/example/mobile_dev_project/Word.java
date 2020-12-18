@@ -17,11 +17,10 @@ public class Word {
     @ColumnInfo(name = "titel")
     private String mtitel;
 
-    @NonNull
     @ColumnInfo(name = "picture")
     private String mpicture;
 
-    public Word(@NonNull String word ,@NonNull String mtitel ,@NonNull String mpicture)
+    public Word(@NonNull String word ,@NonNull String mtitel , String mpicture)
     {
         this.mWord = word;
         this.mtitel = mtitel;

@@ -57,17 +57,20 @@ public abstract class WordRoomDatabase extends RoomDatabase {
         protected Void doInBackground(final Void... params) {
             List<Word> woordjes = new ArrayList<Word>();
 
-            woordjes.add(new Word("Hallo","word1","mario"));
-            woordjes.add(new Word("dfgdfgfdg","word2","mario"));
-            woordjes.add(new Word("zerezre","word3","mario"));
-            woordjes.add(new Word("Hallgeo","word4","mario"));
-            woordjes.add(new Word("Haldlo","word5","mario"));
-            woordjes.add(new Word("Halqdqlo","word6","mario"));
-            woordjes.add(new Word("Hasdqqsllo","word7","mario"));
-            woordjes.add(new Word("Haldddlo","word8","mario"));
-            woordjes.add(new Word("Halggglo","word9","mario"));
-            woordjes.add(new Word("Hacxxwxllo","word10","mario"));
-            woordjes.add(new Word("Hadddllo","word11","mario"));
+            woordjes.add(new Word("Hallo","word1","antwerpen"));
+            woordjes.add(new Word("dfgdfgfdg","word2","hjaa"));
+            woordjes.add(new Word("zerezre","word3",""));
+            woordjes.add(new Word("Hallgeo","word4",""));
+            woordjes.add(new Word("Haldlo","word5",""));
+            woordjes.add(new Word("Halqdqlo","word6",""));
+            woordjes.add(new Word("Hasdqqsllo","word7",""));
+            woordjes.add(new Word("Haldddlo","word8",""));
+            woordjes.add(new Word("Halggglo","word9",""));
+            woordjes.add(new Word("Hacxxwxllo","word10",""));
+            woordjes.add(new Word("Hadddllo","word11",""));
+            woordjes.add(new Word("A" +
+                    "","word12","mario"));
+
             // Start the app with a clean database every time.
             // Not needed if you only populate the database
             // when it is first created
