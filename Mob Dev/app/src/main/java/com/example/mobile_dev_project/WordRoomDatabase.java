@@ -58,18 +58,17 @@ public abstract class WordRoomDatabase extends RoomDatabase {
             List<Word> woordjes = new ArrayList<Word>();
 
             woordjes.add(new Word("Hallo","word1",Integer.toString(R.drawable.antwerpen), Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("dfgdfgfdg","word2",null, Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("zerezre","word3",null,Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("Hallgeo","word4",null,Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("Haldlo","word5",null,Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("Halqdqlo","word6",null,Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("Hasdqqsllo","word7",null,Categoriën.Toerisme.toString()));
+            woordjes.add(new Word("Vliegtuig gecrasht","Vliegtuig gecrasht",null, Categoriën.Toerisme.toString()));
+            woordjes.add(new Word("zerezre","word3",Integer.toString(R.drawable.stad),Categoriën.Nieuws.toString()));
+            woordjes.add(new Word("Hallgeo","word4",Integer.toString(R.drawable.stad),Categoriën.Horeca.toString()));
+            woordjes.add(new Word("Haldlo","word5",null,Categoriën.Horeca.toString()));
+            woordjes.add(new Word("Halqdqlo","word6",Integer.toString(R.drawable.antwerpen),Categoriën.Feesten.toString()));
+            woordjes.add(new Word("Hasdqqsllo","word7",null,Categoriën.Feesten.toString()));
             woordjes.add(new Word("Haldddlo","word8",null,Categoriën.Toerisme.toString()));
             woordjes.add(new Word("Halggglo","word9",null,Categoriën.Toerisme.toString()));
             woordjes.add(new Word("Hacxxwxllo","word10",null,Categoriën.Toerisme.toString()));
             woordjes.add(new Word("Hadddllo","word11",null,Categoriën.Toerisme.toString()));
-            woordjes.add(new Word("A" +
-                    "","word12",null,Categoriën.Nieuws.toString()));
+            woordjes.add(new Word("A" + "","word12",null,Categoriën.Nieuws.toString()));
 
             // Start the app with a clean database every time.
             // Not needed if you only populate the database
