@@ -17,7 +17,7 @@ import android.widget.TextView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-//Todo: echte info toevoegen
+
 //Todo: google maps 21/12
 //Todo:extern openen van sites in app zelf 21/12
 //Todo: layout verbeteren 21/12
