@@ -21,10 +21,16 @@ public interface WordDao {
     @Query("SELECT * FROM word_table ORDER BY word ASC")
     LiveData<List<Word>> getAllWords();
 
+    @Query("SELECT * FROM word_table WHERE catogorie ='Nieuws'   ORDER BY word ASC")
+    LiveData<List<Word>> getAllNieuwsWords();
 
+    @Query("SELECT * FROM word_table WHERE catogorie ='Toerisme'   ORDER BY word ASC")
+    LiveData<List<Word>> getAllToerismeWords();
 
-
-
+    @Query("SELECT * FROM word_table WHERE catogorie ='Horeca'   ORDER BY word ASC")
+    LiveData<List<Word>> getAllHorecaWords();
+    @Query("SELECT * FROM word_table WHERE catogorie ='Feesten'   ORDER BY word ASC")
+    LiveData<List<Word>> getAllFeestenWords();
 
 
 }

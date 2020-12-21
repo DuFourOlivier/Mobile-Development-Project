@@ -1,7 +1,10 @@
 package com.example.mobile_dev_project;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -12,6 +15,7 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Eten_Drinken extends AppCompatActivity {
 
@@ -19,6 +23,9 @@ public class Eten_Drinken extends AppCompatActivity {
     private WordListAdapter mWordListAdapter;
 
     private final LinkedList<String> mWordList = new LinkedList<>();
+    private WordViewModel mWordViewModel;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,14 +62,20 @@ public class Eten_Drinken extends AppCompatActivity {
             }
         });
 
-        for (int i = 0; i < 20; i++) {
-            mWordList.addLast("eten " + i);
-        }
 
 
         mRecyclerView = findViewById(R.id.Recycler);
-        mWordListAdapter = new WordListAdapter(this,mWordList);
-        mRecyclerView.setAdapter(mWordListAdapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        final DBListAdapter adapter = new DBListAdapter(this);
+        mRecyclerView.setAdapter(adapter);
+        mRecyclerView.setLayoutManager( new LinearLayoutManager(this));
+        mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
+        mWordViewModel.getAllWords(WordRoomDatabase.Categoriën.Horeca).observe(this, new Observer<List<Word>>() {
+            @Override
+            public void onChanged(@Nullable final List<Word> words) {
+                // Update the cached copy of the words in the adapter.
+                adapter.setWords(words);
+            }
+        });
+
     }
 }

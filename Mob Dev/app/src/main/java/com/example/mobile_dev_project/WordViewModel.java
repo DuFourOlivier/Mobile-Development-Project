@@ -20,9 +20,28 @@ public class WordViewModel extends AndroidViewModel {
         mAllwords = mRepository.getAllWords();
 
     }
-    LiveData<List<Word>> getAllWords()
+    LiveData<List<Word>> getAllWords(WordRoomDatabase.Categoriën cat)
     {
-        return mAllwords;
+        switch (cat) {
+            case Toerisme:
+                return mRepository.getAllToerismeWords();
+
+            case Horeca:
+                return mRepository.getAllHorecaWords();
+
+            case Nieuws:
+                return mRepository.getAllNieuwsWords();
+
+            case Feesten:
+                return  mRepository.getAllFeestenWords();
+
+            default:
+                return mAllwords;
+         
+
+        }
+
+
     }
     public void insert(Word word)
     {
