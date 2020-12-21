@@ -2,16 +2,24 @@ package com.example.mobile_dev_project;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHolder>{
+
+
+public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHolder> {
+
 
     public final static String EXTRA_MSG = "com.example.android.mobile_deb_project.extra.MESSAGE";
     public final static String EXTRA_TITLE = "com.example.android.mobile_deb_project.extra.TITLE";
@@ -20,7 +28,8 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
 
-     public DBListAdapter(Context context) { mInflater = LayoutInflater.from(context); }
+     public DBListAdapter(Context context) {
+         mInflater = LayoutInflater.from(context); }
 
     @Override
     public WordViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -32,12 +41,22 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
     public void onBindViewHolder(WordViewHolder holder, int position) {
         if (mWords != null) {
             Word current = mWords.get(position);
-            holder.wordItemView.setText(current.getWord());
+            //hier kan je de info kiezen die je op het scherm zet en volgens de wordlist_item
+            holder.wordItemView.setText(current.getMtitel().toString());
+            //
+
+            if (current.getMpicture() != null)
+            {
+                //Drawable d = ContextCompat.getDrawable(this,R.drawable.antwerpen);
+                holder.wordimageview.setImageResource(Integer.parseInt(current.getMpicture().toString()));
+            }
+
         } else {
             // Covers the case of data not being ready yet.
             holder.wordItemView.setText("No Word");
         }
     }
+
     public Word getWordAtPosition(int position)
     {
         return mWords.get(position);
@@ -60,12 +79,15 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
 
     class WordViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView wordItemView;
+        private final ImageView wordimageview;
         final DBListAdapter mAdapter;
 
         private WordViewHolder(View itemView,DBListAdapter adapter) {
             super(itemView);
             this.mAdapter = adapter;
             wordItemView = itemView.findViewById(R.id.textView);
+            wordimageview = itemView.findViewById(R.id.imageView);
+            wordimageview.setOnClickListener(this);
             wordItemView.setOnClickListener(this);
         }
 
@@ -76,13 +98,21 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
 // Use that to access the affected item in mWordList.
             //String element = mWordList.get(mPosition);
             Word pickedelement = mWords.get(mPosition);
-            String element = mWords.get(mPosition).toString();
+
 
 // Change the word in the mWordList.
             Intent intent = new Intent(v.getContext(),InfoPage.class);
             intent.putExtra(EXTRA_MSG,pickedelement.getWord().toString());
             intent.putExtra(EXTRA_TITLE,pickedelement.getMtitel().toString());
-            intent.putExtra(EXTRA_IMAGE,pickedelement.getMpicture().toString());
+            if (pickedelement.getMpicture() != null)
+            {
+                intent.putExtra(EXTRA_IMAGE,pickedelement.getMpicture().toString());
+            }
+            else
+            {
+                intent.putExtra(EXTRA_IMAGE,Integer.toString(R.drawable.ic_launcher_foreground));
+            }
+
             v.getContext().startActivity(intent);
 
 // Notify the adapter, that the data has changed so it can

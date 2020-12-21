@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -20,6 +21,7 @@ public class InfoPage extends AppCompatActivity {
     private TextView mdescription;
     private TextView mtitle;
     private ImageView mimage;
+    static int imagerec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,12 +37,7 @@ public class InfoPage extends AppCompatActivity {
         String title = intent.getStringExtra(DBListAdapter.EXTRA_TITLE);
         String imageName = intent.getStringExtra(DBListAdapter.EXTRA_IMAGE);
 
-        int imagerec= getResources().getIdentifier("@drawable/" + imageName ,null,this.getPackageName());
-        if (imagerec == 0)
-        {
-            imagerec= getResources().getIdentifier("@mipmap/ic_launcher" ,null,this.getPackageName());
-
-        }
+        imagerec = Integer.parseInt(imageName);
         mimage.setImageResource(imagerec);
         mdescription.setText(msg);
         mtitle.setText(title);
