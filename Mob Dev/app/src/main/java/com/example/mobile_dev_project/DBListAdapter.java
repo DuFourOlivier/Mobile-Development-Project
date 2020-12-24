@@ -26,6 +26,7 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
     public final static String EXTRA_TITLE = "com.example.android.mobile_deb_project.extra.TITLE";
     public final static String EXTRA_IMAGE  = "com.example.android.mobile_deb_project.extra.IMAGE";
     public final static String EXTRA_LINK  = "com.example.android.mobile_deb_project.extra.LINK";
+    public final static String EMPTY_MAPS = "https://www.google.com";
 
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
@@ -114,8 +115,18 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
             {
                 intent.putExtra(EXTRA_IMAGE,Integer.toString(R.drawable.ic_launcher_foreground));
             }
-            String url = pickedelement.getMlink().toString();
-            intent.setData(Uri.parse(url));
+            String url = "";
+            if (pickedelement.getMlink() != null)
+            {
+                url = pickedelement.getMlink().toString();
+            }
+            intent.putExtra(EXTRA_LINK,url);
+            Uri maps = Uri.EMPTY;
+            if (pickedelement.getMmap() != null)
+            {
+                maps = Uri.parse(pickedelement.getMmap().toString());
+            }
+            intent.setData(maps);
 
             v.getContext().startActivity(intent);
 

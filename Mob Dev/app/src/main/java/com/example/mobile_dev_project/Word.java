@@ -26,13 +26,17 @@ public class Word {
     @ColumnInfo(name = "mlink")
     private String mlink;
 
-    public Word(@NonNull String word ,@NonNull String mtitel , String mpicture, String mcatogorie,String mlink)
+    @ColumnInfo(name = "mmap")
+    private String mmap;
+
+    public Word(@NonNull String word ,@NonNull String mtitel , String mpicture, String mcatogorie,String mlink,String mmap)
     {
         this.mWord = word;
         this.mtitel = mtitel;
         this.mpicture = mpicture;
         this.mcatogorie = mcatogorie;
         this.mlink = mlink;
+        this.mmap = mmap;
     }
 
     public String getWord()
@@ -43,6 +47,7 @@ public class Word {
     public String getMpicture() { return this.mpicture;}
     public String getMcatogorie() {return this.mcatogorie;}
     public String getMlink() {return this.mlink;}
+    public String getMmap() {return this.mmap;}
 
 
 

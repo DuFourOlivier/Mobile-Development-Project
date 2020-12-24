@@ -47,5 +47,12 @@
         android:layout_height="wrap_content"
         android:text="open website"></Button>
 
+    <Button
+        android:id="@+id/buttonmaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="40"
+        android:text="open googlemaps" />
+
 </LinearLayout>
 </ScrollView>

@@ -8,6 +8,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
@@ -27,6 +28,7 @@ public class InfoPage extends AppCompatActivity {
     private TextView mtitle;
     private ImageView mimage;
     private Button mbutton;
+    private Button mMaps;
     static int imagerec;
 
     @Override
@@ -38,26 +40,43 @@ public class InfoPage extends AppCompatActivity {
         mtitle = findViewById(R.id.Title);
         mimage = findViewById(R.id.picture);
         mbutton = findViewById(R.id.button);
+        mMaps = findViewById(R.id.buttonmaps);
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra(DBListAdapter.EXTRA_MSG);
         String title = intent.getStringExtra(DBListAdapter.EXTRA_TITLE);
         String imageName = intent.getStringExtra(DBListAdapter.EXTRA_IMAGE);
-        Uri link = intent.getData();
-
+        String link = intent.getStringExtra(DBListAdapter.EXTRA_LINK);
+        Uri maps = intent.getData();
         imagerec = Integer.parseInt(imageName);
         mimage.setImageResource(imagerec);
         mdescription.setText(msg);
         mtitle.setText(title);
+        Log.d("TAG", "onCreate: INFORMATION URI MAPS.EMPTY " + maps.toString());
+        if(maps.toString() == Uri.EMPTY.toString() )
+        {
+            mMaps.setVisibility(View.INVISIBLE);
+        }
+
         //mimage.setImageResource(R.drawable.ic_action_name);
 
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent webintent = new Intent(v.getContext(),Website.class);
-                webintent.setData(link);
+                webintent.setData(Uri.parse(link));
                 startActivity(webintent);
 
+            }
+        });
+
+        mMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent mapsintent = new Intent();
+                mapsintent.setAction(intent.ACTION_VIEW);
+                mapsintent.setData(maps);
+                startActivity(mapsintent);
             }
         });
 
