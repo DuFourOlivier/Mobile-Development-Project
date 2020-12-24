@@ -3,6 +3,7 @@ package com.example.mobile_dev_project;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +25,7 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
     public final static String EXTRA_MSG = "com.example.android.mobile_deb_project.extra.MESSAGE";
     public final static String EXTRA_TITLE = "com.example.android.mobile_deb_project.extra.TITLE";
     public final static String EXTRA_IMAGE  = "com.example.android.mobile_deb_project.extra.IMAGE";
+    public final static String EXTRA_LINK  = "com.example.android.mobile_deb_project.extra.LINK";
 
     private final LayoutInflater mInflater;
     private List<Word> mWords; // Cached copy of words
@@ -112,6 +114,8 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
             {
                 intent.putExtra(EXTRA_IMAGE,Integer.toString(R.drawable.ic_launcher_foreground));
             }
+            String url = pickedelement.getMlink().toString();
+            intent.setData(Uri.parse(url));
 
             v.getContext().startActivity(intent);
 

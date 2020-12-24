@@ -6,21 +6,27 @@ import androidx.lifecycle.LiveData;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.net.URI;
+import java.net.URL;
 import java.util.List;
 
 public class InfoPage extends AppCompatActivity {
     private TextView mdescription;
     private TextView mtitle;
     private ImageView mimage;
+    private Button mbutton;
     static int imagerec;
 
     @Override
@@ -31,17 +37,29 @@ public class InfoPage extends AppCompatActivity {
         mdescription = findViewById(R.id.Description);
         mtitle = findViewById(R.id.Title);
         mimage = findViewById(R.id.picture);
+        mbutton = findViewById(R.id.button);
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra(DBListAdapter.EXTRA_MSG);
         String title = intent.getStringExtra(DBListAdapter.EXTRA_TITLE);
         String imageName = intent.getStringExtra(DBListAdapter.EXTRA_IMAGE);
+        Uri link = intent.getData();
 
         imagerec = Integer.parseInt(imageName);
         mimage.setImageResource(imagerec);
         mdescription.setText(msg);
         mtitle.setText(title);
         //mimage.setImageResource(R.drawable.ic_action_name);
+
+        mbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent webintent = new Intent(v.getContext(),Website.class);
+                webintent.setData(link);
+                startActivity(webintent);
+
+            }
+        });
 
 
 
