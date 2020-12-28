@@ -1,18 +1,12 @@
 package com.example.mobile_dev_project;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -20,16 +14,17 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
 
-//Todo: layout verbeteren 21/12
 
-//Todo 28/12 Evaluatie + bronnen + enige commentaar
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        /*2
+        Coding, A. (2019, 10 november). How to Implement Bottom Navigation With Activities in Android Studio | BottomNav | Android Coding. YouTube.
+        https://www.youtube.com/watch?v=JjfSjMs0ImQ&feature=youtu.be
+        */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.nav_home);
@@ -47,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_horeca:
-                        startActivity(new Intent(getApplicationContext(),Eten_Drinken.class));
+                        startActivity(new Intent(getApplicationContext(), Horeca.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_nieuws:
@@ -55,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_plaats:
-                        startActivity(new Intent(getApplicationContext(),Bekende_Plaatsen.class));
+                        startActivity(new Intent(getApplicationContext(), Toerisme.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
@@ -68,50 +63,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-    }
-    public void NavigateToNieuws(View view) {
-        Intent intent = new Intent(this,NieuwsTablad.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToPlaatsen(View view) {
-        Intent intent = new Intent(this,Bekende_Plaatsen.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToEten(View view) {
-        Intent intent = new Intent(this,Eten_Drinken.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToParty(View view) {
-        Intent intent = new Intent(this,Party.class);
-        startActivity(intent);
-    }
-
-
-
-
-    public void NavigateToHome(MenuItem item) {Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToNieuws(MenuItem item) {
-        Intent intent = new Intent(this,NieuwsTablad.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToPlaatsen(MenuItem item) {    Intent intent = new Intent(this,Bekende_Plaatsen.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToEten(MenuItem item) {       Intent intent = new Intent(this,Eten_Drinken.class);
-        startActivity(intent);
-    }
-
-    public void NavigateToParty(MenuItem item) {
-        Intent intent = new Intent(this,Party.class);
-        startActivity(intent);
-    }
-}
+}}

@@ -29,7 +29,10 @@ public class NieuwsTablad extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nieuws_tablad);
-
+        /* bron navigation:
+        Coding, A. (2019, 10 november). How to Implement Bottom Navigation With Activities in Android Studio | BottomNav | Android Coding. YouTube.
+        https://www.youtube.com/watch?v=JjfSjMs0ImQ&feature=youtu.be
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.setSelectedItemId(R.id.nav_nieuws);
@@ -47,13 +50,13 @@ public class NieuwsTablad extends AppCompatActivity {
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_horeca:
-                        startActivity(new Intent(getApplicationContext(),Eten_Drinken.class));
+                        startActivity(new Intent(getApplicationContext(), Horeca.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_nieuws:
                         return true;
                     case R.id.nav_plaats:
-                        startActivity(new Intent(getApplicationContext(),Bekende_Plaatsen.class));
+                        startActivity(new Intent(getApplicationContext(), Toerisme.class));
                         overridePendingTransition(0,0);
                         return true;
                 }

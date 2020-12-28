@@ -17,44 +17,50 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Eten_Drinken extends AppCompatActivity {
+public class Toerisme extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private WordListAdapter mWordListAdapter;
+    private DBListAdapter mWordListAdapter;
 
     private final LinkedList<String> mWordList = new LinkedList<>();
     private WordViewModel mWordViewModel;
 
 
+    
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_eten__drinken);
-
+        setContentView(R.layout.activity_toerisme);
+        /* bron navigation:
+        Coding, A. (2019, 10 november). How to Implement Bottom Navigation With Activities in Android Studio | BottomNav | Android Coding. YouTube.
+        https://www.youtube.com/watch?v=JjfSjMs0ImQ&feature=youtu.be
+         */
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.setSelectedItemId(R.id.nav_horeca);
+        bottomNavigationView.setSelectedItemId(R.id.nav_plaats);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.nav_home:
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        overridePendingTransition(0,0);
+                    case R.id.nav_plaats:
                         return true;
                     case R.id.nav_feesten:
                         startActivity(new Intent(getApplicationContext(),Party.class));
                         overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_horeca:
+                        startActivity(new Intent(getApplicationContext(), Horeca.class));
+                        overridePendingTransition(0,0);
                         return true;
                     case R.id.nav_nieuws:
                         startActivity(new Intent(getApplicationContext(),NieuwsTablad.class));
                         overridePendingTransition(0,0);
                         return true;
-                    case R.id.nav_plaats:
-                        startActivity(new Intent(getApplicationContext(),Bekende_Plaatsen.class));
+                    case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
                         overridePendingTransition(0,0);
                         return true;
                 }
@@ -62,20 +68,21 @@ public class Eten_Drinken extends AppCompatActivity {
             }
         });
 
-
-
         mRecyclerView = findViewById(R.id.Recycler);
         final DBListAdapter adapter = new DBListAdapter(this);
         mRecyclerView.setAdapter(adapter);
         mRecyclerView.setLayoutManager( new LinearLayoutManager(this));
         mWordViewModel = ViewModelProviders.of(this).get(WordViewModel.class);
-        mWordViewModel.getAllWords(WordRoomDatabase.Categoriën.Horeca).observe(this, new Observer<List<Word>>() {
+        mWordViewModel.getAllWords(WordRoomDatabase.Categoriën.Toerisme).observe(this, new Observer<List<Word>>() {
             @Override
             public void onChanged(@Nullable final List<Word> words) {
                 // Update the cached copy of the words in the adapter.
                 adapter.setWords(words);
             }
         });
+
+
+
 
     }
 }

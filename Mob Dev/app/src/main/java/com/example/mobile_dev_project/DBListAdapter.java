@@ -50,7 +50,10 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
 
             if (current.getMpicture() != null)
             {
-                //Drawable d = ContextCompat.getDrawable(this,R.drawable.antwerpen);
+                /* Bron:
+                Delessio, C., Conder, S., & Darcey, L. (z.d.). Working with ImageViews and Bitmaps in Android Application Development | Examining ImageView | InformIT. Informit.van
+                https://www.informit.com/articles/article.aspx?p=2423187
+                */
                 holder.wordimageview.setImageResource(Integer.parseInt(current.getMpicture().toString()));
             }
 
@@ -93,7 +96,10 @@ public class DBListAdapter extends RecyclerView.Adapter<DBListAdapter.WordViewHo
             wordimageview.setOnClickListener(this);
             wordItemView.setOnClickListener(this);
         }
-
+        /* bron:
+        Android Coding. (2020, 12 september). How to Implement Google Map Inside Fragment in Android Studio | GoogleMap | Android Coding [Video]. YouTube.
+        https://www.youtube.com/watch?v=YCFPClPjDIQ&t=461s
+        */
         @Override
         public void onClick(View v) {
             // Get the position of the item that was clicked.

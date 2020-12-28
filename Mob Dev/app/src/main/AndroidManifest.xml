@@ -9,8 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_app_icon_complete_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Mobile_Dev_Project"
-      >
+        android:theme="@style/Theme.Mobile_Dev_Project">
+        <!--
+        bron locking screen:
+        lecture snippets. (2014, 16 november). Android: Locking Screen Orientation [Video]. YouTube.
+        https://www.youtube.com/watch?v=SgpbZSRoEqk&ab_channel=lecturesnippets
+        !-->
         <activity android:name=".Website"></activity>
         <activity android:name=".InfoPage"
             android:screenOrientation="portrait"
@@ -20,11 +24,11 @@
             android:label="@string/Feesten_label"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Eten_Drinken"
+            android:name=".Horeca"
             android:label="@string/label_horeca"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".Bekende_Plaatsen"
+            android:name=".Toerisme"
             android:label="@string/label_toerisme"
             android:screenOrientation="portrait"/>
         <activity

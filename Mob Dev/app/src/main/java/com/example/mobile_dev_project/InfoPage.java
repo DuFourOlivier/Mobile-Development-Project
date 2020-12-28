@@ -30,7 +30,18 @@ public class InfoPage extends AppCompatActivity {
     private Button mbutton;
     private Button mMaps;
     static int imagerec;
-
+    /* bron back button:
+    S. (2018, 24 oktober). Show Back Button in Child Activity - Android Studio | Tutorial. YouTube.
+    https://www.youtube.com/watch?v=W1MSs8rBtB4&feature=youtu.be
+    */
+    /* Bron maps:
+    Delessio, C., Conder, S., & Darcey, L. (z.d.). Working with ImageViews and Bitmaps in Android Application Development | Examining ImageView | InformIT. Informit.van
+    https://www.informit.com/articles/article.aspx?p=2423187
+    */
+    /* bron webview:
+    Coding in Flow. (2017, 23 oktober). WebView - Android Studio Tutorial [Video]. YouTube.
+     https://www.youtube.com/watch?v=TUXui5ItBkM
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +81,10 @@ public class InfoPage extends AppCompatActivity {
             }
         });
 
+            /* Bron maps:
+            Delessio, C., Conder, S., & Darcey, L. (z.d.). Working with ImageViews and Bitmaps in Android Application Development | Examining ImageView | InformIT. Informit.van
+            https://www.informit.com/articles/article.aspx?p=2423187
+            */
         mMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,7 +98,10 @@ public class InfoPage extends AppCompatActivity {
 
 
 
-        //textView.setText();
+    /* bron back button:
+    S. (2018, 24 oktober). Show Back Button in Child Activity - Android Studio | Tutorial. YouTube.
+    https://www.youtube.com/watch?v=W1MSs8rBtB4&feature=youtu.be
+    */
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
