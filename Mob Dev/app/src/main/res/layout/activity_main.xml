@@ -9,23 +9,23 @@
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="292dp"
-        android:layout_height="231dp"
+        android:layout_height="280dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@string/Description_homepicture"
+        android:src="@drawable/antwerpen"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:src="@drawable/antwerpen" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:text="@string/HomeScreen_Title"
         android:textSize="30sp"
@@ -33,49 +33,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/Nieuws"
-        android:layout_width="111dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="44dp"
-        android:onClick="NavigateToNieuws"
-        android:text="@string/nieuws_Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <Button
-        android:id="@+id/Plaatsen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="44dp"
-        android:onClick="NavigateToPlaatsen"
-        android:text="@string/label_toerisme"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
-
-    <Button
-        android:id="@+id/Eten_Drinken"
-        android:layout_width="111dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="220dp"
-        android:onClick="NavigateToEten"
-        android:text="@string/label_horeca"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Party" />
-
-    <Button
-        android:id="@+id/Party"
-        android:layout_width="111dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="32dp"
-        android:onClick="NavigateToParty"
-        android:text="@string/Feesten_label"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Nieuws" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -87,5 +44,21 @@
         app:itemTextColor="@drawable/selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navigation" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="308dp"
+        android:layout_height="131dp"
+        android:fontFamily="@font/sonsie_one"
+        android:text="@string/HomePage_Tekst"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        app:layout_constraintVertical_bias="0.53" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

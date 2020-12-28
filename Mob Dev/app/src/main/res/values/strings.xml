@@ -34,4 +34,10 @@
     <string name="label_horeca">Horeca</string>
     <string name="label_toerisme">Toerisme</string>
     <string name="label_nieuws">Nieuws</string>
+    <string name="HomePage_Tekst">Een stad die enkel maar groeit, plaatsen om te ontdekken en eten voor de lekkerbekken.</string>
+    <string name="InfoPage_title">title</string>
+    <string name="InfoPage_tekst">lots of text</string>
+    <string name="Infpage_openWeb">open website</string>
+    <string name="InfoPage_OpenMaps">open googlemaps</string>
+    <string name="InfoPage_picDescript">PicToReplace</string>
 </resources>

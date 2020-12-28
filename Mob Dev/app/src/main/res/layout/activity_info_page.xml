@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout
 
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:weightSum="100">
 
     <ImageView
@@ -15,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="246dp"
         android:layout_weight="40"
+        android:contentDescription="@string/InfoPage_picDescript"
         android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher"></ImageView>
 
@@ -22,9 +25,9 @@
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:text="title"
+        android:text="@string/InfoPage_title"
         android:textAllCaps="true"
         android:textColor="#000"
         android:textSize="30sp"
@@ -34,25 +37,33 @@
         android:id="@+id/Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:text="lots of text"
+        android:text="@string/InfoPage_tekst"
         android:textColor="#000"
         android:textSize="20sp" />
 
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="open website"></Button>
+        android:layout_width="118dp"
+        android:layout_height="38dp"
+        android:text="Site"
+        android:textAlignment="center"
+        android:translationX="10dp"
+        app:icon="@drawable/ic_web"></Button>
+
+
+
 
     <Button
         android:id="@+id/buttonmaps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="40"
-        android:text="open googlemaps" />
+        android:layout_width="118dp"
+        android:layout_height="38dp"
+        android:text="Web"
+        android:textAlignment="center"
+        android:translationX="10dp"
+        app:icon="@drawable/ic_map"></Button>
 
 </LinearLayout>
 </ScrollView>

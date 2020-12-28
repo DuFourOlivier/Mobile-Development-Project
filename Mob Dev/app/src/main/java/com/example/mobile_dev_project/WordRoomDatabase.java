@@ -210,6 +210,8 @@ public abstract class WordRoomDatabase extends RoomDatabase {
                     "Patrice Van Delm techno\n" +
                     "Yves Deruyter techno, trance, house, retro","Comme Chez Vaag invites Yves Deruyter",Integer.toString(R.drawable.artikel12),Categoriën.Feesten.toString(),"https://partyflock.be/party/409848:Cafe-Vaag-invites-Yves-Deruyter ","https://www.google.com/maps/place/De+Shop/@51.2340149,4.4012444,17z/data=!3m1!4b1!4m5!3m4!1s0x47c3f644d9b39ad3:0x76bebe003df8e011!8m2!3d51.2340149!4d4.4034331"));
 
+
+
             // Start the app with a clean database every time.
             // Not needed if you only populate the database
             // when it is first created
